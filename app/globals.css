@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Google Fonts import ── */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap");
+
+/* ── CSS Variables ── */
+:root {
+  --font-display: "DM Serif Display";
+  --font-body: "Outfit";
+
+  /* Couleurs */
+  --gold: #c8a951;
+  --gold-light: #e8c96a;
+  --gold-muted: #9a7e3a;
+  --gold-pale: #f0e4b8;
+
+  --dark: #0b0b0f;
+  --dark-surface: #13131a;
+  --dark-elevated: #1a1a24;
+  --dark-border: #252535;
+
+  --cream: #f2ede4;
+  --cream-muted: #a89f92;
+  --cream-dim: #6a6460;
+}
+
+/* ── Base ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--cream);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Sélection de texte ── */
+::selection {
+  background-color: var(--gold);
+  color: var(--dark);
+}
+
+/* ── Scrollbar personnalisée ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dark-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-muted);
+}
+
+/* ── Utilitaires typographiques ── */
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+/* ── Grain overlay (texture subtile) ── */
+.grain-overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ── Gold shimmer text ── */
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold-muted) 0%,
+    var(--gold-light) 40%,
+    var(--gold) 50%,
+    var(--gold-light) 60%,
+    var(--gold-muted) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ── Ligne décorative dorée ── */
+.gold-line {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+/* ── Card glassmorphism ── */
+.card-glass {
+  background: rgba(19, 19, 26, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--dark-border);
+}
+
+/* ── Bouton principal ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--gold);
+  color: var(--dark);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px rgba(200, 169, 81, 0.25);
+}
+
+/* ── Bouton secondaire (outline) ── */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 27px;
+  background: transparent;
+  color: var(--cream);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  border: 1px solid var(--dark-border);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-1px);
+}
+
+/* ── Input styles ── */
+.input-field {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--dark-elevated);
+  border: 1px solid var(--dark-border);
+  border-radius: 2px;
+  color: var(--cream);
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: var(--cream-dim);
+}
+
+.input-field:focus {
+  border-color: var(--gold-muted);
+}
+
+/* ── Section padding ── */
+.section-padding {
+  padding: 96px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 64px 0;
+  }
+}
