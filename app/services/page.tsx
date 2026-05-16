@@ -20,7 +20,7 @@ const setupOffer = {
   title: "Setup complet Meta Ads",
   subtitle: "Lancez vos premières campagnes Facebook & Instagram sur des bases solides",
   price: "À partir de 690 €",
-  priceNote: "Tarif fixe — pas de surprise",
+  priceNote: "Tarif fixe, sans surprise",
   description:
     "Vous démarrez avec Meta Ads ou vous repartez de zéro ? Je prends en charge l'intégralité du setup : structure du compte, audiences, créatifs, tunnel de conversion (systeme.io ou WordPress). À la livraison, vos campagnes sont prêtes à générer vos premiers rendez-vous.",
   inclus: [
@@ -48,7 +48,7 @@ const monthlyOffer = {
   title: "Suivi mensuel Meta Ads",
   subtitle: "Déléguez, recevez des clients, concentrez-vous sur votre pratique",
   price: "À partir de 390 €/mois",
-  priceNote: "Sans engagement — résiliable à tout moment",
+  priceNote: "Sans engagement, résiliable à tout moment",
   description:
     "Vos campagnes Meta Ads tournent en permanence ? Je m'occupe de tout : optimisation quotidienne, ajustements créatifs, reporting mensuel clair. Vous recevez chaque mois un bilan complet et une stratégie pour le mois suivant.",
   inclus: [
@@ -57,7 +57,7 @@ const monthlyOffer = {
     "Création de nouveaux visuels chaque mois (2 à 4 formats)",
     "Tests A/B continus",
     "Rapport mensuel détaillé (coût par lead, ROAS, recommandations)",
-    "Call mensuel de 45 min — bilan + stratégie",
+    "Call mensuel de 45 min : bilan et stratégie",
     "Réactivité sous 24h par email / WhatsApp",
     "Veille et adaptation aux changements de l'algorithme Meta",
   ],
@@ -77,7 +77,7 @@ const faq = [
   },
   {
     q: "Combien de temps avant de voir des résultats avec Meta Ads ?",
-    a: "En général, les premiers leads arrivent dès les 2 premières semaines. Des résultats stables et optimisés s'observent après 4 à 6 semaines — le temps nécessaire pour que l'algorithme Meta apprenne.",
+    a: "En général, les premiers leads arrivent dès les 2 premières semaines. Des résultats stables et optimisés s'observent après 4 à 6 semaines, le temps nécessaire pour que l'algorithme Meta apprenne.",
   },
   {
     q: "Quel budget publicitaire Meta Ads faut-il prévoir ?",
@@ -133,7 +133,7 @@ export default function ServicesPage() {
               Mes <em className="text-gold">offres</em>
             </h1>
             <p className="text-cream-muted text-lg max-w-xl leading-relaxed">
-              Deux façons d'avancer selon votre situation. Des prestations Meta Ads taillées pour les praticiens bien-être — naturopathes, coachs, thérapeutes.
+              Deux façons d'avancer selon votre situation. Des prestations Meta Ads taillées pour les praticiens bien-être : naturopathes, coachs, thérapeutes.
             </p>
           </AnimatedSection>
         </div>

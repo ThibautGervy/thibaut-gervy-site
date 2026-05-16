@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const skills = [
   { label: "Meta Ads (Facebook & Instagram)" },
   { label: "Optimisation de conversion (CRO)" },
-  { label: "WordPress — création & optimisation" },
+  { label: "WordPress : création et optimisation" },
   { label: "SEO on-page et technique" },
   { label: "systeme.io & LearnyBox" },
   { label: "Création de design & visuels" },
@@ -39,7 +39,7 @@ const values = [
   {
     icon: BarChart2,
     title: "Résultats mesurables",
-    desc: "Je ne travaille pas à l'intuition. Chaque décision est basée sur des données. Coût par lead, taux de conversion, ROAS — tout est tracé.",
+    desc: "Je ne travaille pas à l'intuition. Chaque décision est basée sur des données. Coût par lead, taux de conversion, ROAS, tout est tracé.",
   },
   {
     icon: Handshake,
@@ -93,7 +93,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-cream-muted text-lg max-w-xl leading-relaxed">
               Derrière les chiffres et les campagnes, il y a un être humain qui
-              comprend votre métier — et qui travaille pour votre réussite.
+              comprend votre métier, qui travaille pour votre réussite.
             </p>
           </AnimatedSection>
         </div>
@@ -140,7 +140,7 @@ export default function AboutPage() {
                 className="font-display text-3xl md:text-4xl text-cream mb-6"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Je suis Thibaut — et je{" "}
+                Je suis Thibaut, et je{" "}
                 <em className="text-gold">transforme</em> votre marketing en
                 clients concrets.
               </h2>
@@ -153,7 +153,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Pourquoi ce choix ? Parce que les praticiens bien-être font
-                  un travail extraordinaire — et méritent d'être connus. Parce
+                  un travail extraordinaire, et ils méritent d'être connus. Parce
                   que le marketing générique ne fonctionne pas pour votre
                   secteur. Et parce que j'ai découvert que c'est là où je peux
                   apporter le plus de valeur.
@@ -297,7 +297,7 @@ export default function AboutPage() {
               style={{ fontFamily: "var(--font-display)" }}
             >
               "Je ne vends pas de la publicité. Je construis des systèmes
-              d'acquisition qui fonctionnent — et je les explique clairement,
+              d'acquisition qui fonctionnent, et je les explique clairement,
               à chaque étape."
             </p>
             <div className="flex items-center justify-center gap-3">

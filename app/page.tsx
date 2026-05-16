@@ -28,7 +28,7 @@ const solutions = [
   {
     icon: Target,
     title: "Campagnes Meta Ads ciblées",
-    desc: "Un message précis pour les bonnes personnes au bon moment — pas de gaspillage budgétaire.",
+    desc: "Un message précis pour les bonnes personnes au bon moment — pas de gaspillage budgétaire!",
   },
   {
     icon: TrendingUp,
@@ -121,7 +121,7 @@ export default function HomePage() {
                 Campagnes Meta Ads sur mesure pour{" "}
                 <span className="text-cream">naturopathes, coachs</span> et{" "}
                 <span className="text-cream">thérapeutes</span> qui veulent
-                des clients — pas des clics.
+                des clients, pas des clics.
               </p>
             </AnimatedSection>
 
@@ -254,7 +254,7 @@ export default function HomePage() {
               <p className="text-cream-muted text-base leading-relaxed">
                 Je ne travaille qu'avec des praticiens bien-être. Je connais
                 vos contraintes, votre audience, et ce qui les fait passer à
-                l'action. Pas de généraliste, pas de template — une stratégie
+                l'action. Pas de généraliste, pas de template, une stratégie
                 taillée pour vous.
               </p>
             </AnimatedSection>
