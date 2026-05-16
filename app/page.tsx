@@ -69,80 +69,67 @@ export default function HomePage() {
   return (
     <>
       {/* ════════ HERO ════════ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Fond sombre */}
-        <div className="absolute inset-0 bg-dark z-0" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/95 to-dark/60 z-10" />
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-dark">
 
-        {/* Photo Thibaut côté droit */}
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 z-0 hidden lg:block">
+        {/* ── Photo plein droite ── */}
+        <div className="absolute inset-y-0 right-0 w-[55%] hidden lg:block">
           <Image
             src="/thibaut-portrait.png"
             alt="Thibaut Gervy — Spécialiste Meta Ads pour praticiens bien-être"
             fill
             priority
-            className="object-cover object-center"
-            sizes="50vw"
+            className="object-cover object-top"
+            sizes="55vw"
           />
-          {/* Dégradé pour fondre avec le fond */}
-          <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-dark/30" />
+          {/* Fondu gauche vers le fond sombre */}
+          <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/60 to-transparent" />
+          {/* Fondu bas subtil */}
+          <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-dark/20" />
         </div>
 
-        {/* Cercles décoratifs */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full border border-gold/5 animate-pulse z-10" />
-        <div className="absolute top-1/3 right-1/3 w-64 h-64 rounded-full border border-gold/8 z-10" />
+        {/* ── Contenu texte ── */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
+          <div className="max-w-xl">
 
-        <div className="relative z-20 max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
-          <div className="max-w-2xl">
+            {/* Tagline */}
             <AnimatedSection delay={0}>
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-3 mb-10">
                 <span className="gold-line" />
                 <span className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">
-                  Meta Ads · Conversion · Bien-être
+                  Spécialiste Meta Ads · Bien-être
                 </span>
               </div>
             </AnimatedSection>
 
+            {/* H1 — ultra épuré */}
             <AnimatedSection delay={0.1}>
               <h1
-                className="font-display text-5xl md:text-6xl lg:text-7xl text-cream leading-[1.08] mb-6"
+                className="font-display text-5xl md:text-6xl lg:text-[68px] text-cream leading-[1.05] mb-6"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Transformez votre{" "}
-                <em className="text-gold not-italic">visibilité</em>
+                Et si votre agenda
                 <br />
-                en clients grâce à des
+                était plein dès
                 <br />
-                campagnes Meta qui
-                <br />
-                <em className="text-gold not-italic">convertissent vraiment</em>
+                <em className="text-gold not-italic">le mois prochain ?</em>
               </h1>
             </AnimatedSection>
 
+            {/* Sous-titre — 1 seule phrase */}
             <AnimatedSection delay={0.2}>
-              <p className="text-cream-muted text-lg md:text-xl leading-relaxed mb-4 max-w-xl">
-                J'aide les{" "}
-                <strong className="text-cream font-medium">
-                  naturopathes, coachs et thérapeutes
-                </strong>{" "}
-                à remplir leur agenda grâce à des stratégies{" "}
-                <strong className="text-cream font-medium">Meta Ads</strong>{" "}
-                pensées pour leur secteur.
-              </p>
-              <p className="text-cream-muted text-base leading-relaxed mb-10 max-w-xl">
-                Pas de solution générique. Un{" "}
-                <strong className="text-cream font-medium">
-                  tunnel de conversion
-                </strong>{" "}
-                optimisé et des campagnes qui performent.
+              <p className="text-cream-muted text-lg leading-relaxed mb-10 max-w-md">
+                Campagnes Meta Ads sur mesure pour{" "}
+                <span className="text-cream">naturopathes, coachs</span> et{" "}
+                <span className="text-cream">thérapeutes</span> qui veulent
+                des clients — pas des clics.
               </p>
             </AnimatedSection>
 
+            {/* CTA */}
             <AnimatedSection delay={0.3}>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-14">
                 <Link href="/contact" className="btn-primary">
-                  Discutons de votre projet <ArrowRight size={16} />
+                  Parlons de votre projet <ArrowRight size={16} />
                 </Link>
                 <Link href="/services" className="btn-secondary">
                   Voir mes offres
@@ -150,37 +137,42 @@ export default function HomePage() {
               </div>
             </AnimatedSection>
 
+            {/* Stats — preuve sociale */}
             <AnimatedSection delay={0.4}>
-              <div className="flex flex-wrap gap-8 mt-14 pt-10 border-t border-dark-border">
+              <div className="flex gap-10 pt-8 border-t border-dark-border/60">
                 {[
-                  { value: "3 ans+", label: "d'expérience Meta Ads" },
                   { value: "20+", label: "praticiens accompagnés" },
-                  { value: "×3", label: "ROI moyen constaté" },
+                  { value: "×3", label: "ROI moyen" },
+                  { value: "11 €", label: "coût par lead moyen" },
                 ].map((stat) => (
                   <div key={stat.label}>
                     <p
-                      className="font-display text-3xl text-gold mb-1"
+                      className="font-display text-2xl text-gold mb-0.5"
                       style={{ fontFamily: "var(--font-display)" }}
                     >
                       {stat.value}
                     </p>
-                    <p className="text-cream-dim text-xs">{stat.label}</p>
+                    <p className="text-cream-dim text-xs leading-tight">{stat.label}</p>
                   </div>
                 ))}
               </div>
             </AnimatedSection>
           </div>
         </div>
+
+        {/* Badge flottant sur la photo */}
+        <div className="absolute bottom-10 right-10 hidden lg:block z-20">
+          <div className="bg-dark-surface/90 backdrop-blur-sm border border-gold/30 rounded-sm px-5 py-4">
+            <p className="text-xs text-cream-dim mb-1">Coût par lead après optimisation</p>
+            <p className="text-gold font-semibold text-xl">-60% <span className="text-cream-muted text-xs font-normal">en moyenne</span></p>
+          </div>
+        </div>
       </section>
 
       {/* ════════ PROBLÈME ════════ */}
-      <section
-        className="section-padding bg-dark-surface"
-        aria-label="Problèmes courants des praticiens bien-être"
-      >
+      <section className="section-padding bg-dark-surface">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Texte */}
             <div>
               <AnimatedSection direction="left">
                 <span className="gold-line mb-5" />
@@ -195,15 +187,11 @@ export default function HomePage() {
                 <p className="text-cream-muted text-base leading-relaxed mb-8">
                   Être un excellent praticien ne suffit pas pour remplir son
                   agenda. Dans un monde numérique saturé, la visibilité ne
-                  s'improvise plus. Ça, je le sais — et c'est exactement ce
-                  sur quoi je travaille.
+                  s'improvise plus.
                 </p>
-                <ul className="space-y-4" role="list">
+                <ul className="space-y-4">
                   {problems.map((p, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-3 text-cream-muted text-sm"
-                    >
+                    <li key={i} className="flex items-start gap-3 text-cream-muted text-sm">
                       <span className="mt-1 w-4 h-4 rounded-full border border-cream-dim/30 flex-shrink-0 flex items-center justify-center">
                         <span className="w-1.5 h-1.5 rounded-full bg-cream-dim" />
                       </span>
@@ -214,27 +202,21 @@ export default function HomePage() {
               </AnimatedSection>
             </div>
 
-            {/* Photo Thibaut au laptop */}
             <AnimatedSection direction="right" className="relative">
               <div className="relative rounded-sm overflow-hidden aspect-[4/3]">
                 <Image
                   src="/thibaut-laptop.png"
-                  alt="Thibaut Gervy analysant des campagnes Meta Ads pour un praticien bien-être"
+                  alt="Thibaut Gervy analysant des campagnes Meta Ads"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent" />
-                {/* Badge flottant */}
                 <div className="absolute bottom-6 left-6 bg-dark-surface/90 backdrop-blur-sm border border-dark-border rounded-sm px-4 py-3">
-                  <p className="text-xs text-cream-dim mb-0.5">
-                    Coût par lead moyen
-                  </p>
+                  <p className="text-xs text-cream-dim mb-0.5">Coût par lead moyen</p>
                   <p className="text-gold font-semibold text-lg">
                     -60%{" "}
-                    <span className="text-cream-muted text-xs font-normal">
-                      après optimisation
-                    </span>
+                    <span className="text-cream-muted text-xs font-normal">après optimisation</span>
                   </p>
                 </div>
               </div>
@@ -244,13 +226,9 @@ export default function HomePage() {
       </section>
 
       {/* ════════ SOLUTION ════════ */}
-      <section
-        className="section-padding"
-        aria-label="Solutions Meta Ads pour praticiens bien-être"
-      >
+      <section className="section-padding">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-            {/* Photo avec cliente */}
             <AnimatedSection direction="left" className="relative">
               <div className="relative rounded-sm overflow-hidden aspect-[4/3]">
                 <Image
@@ -264,7 +242,6 @@ export default function HomePage() {
               </div>
             </AnimatedSection>
 
-            {/* Texte */}
             <AnimatedSection direction="right">
               <span className="gold-line mb-5" />
               <h2
@@ -275,10 +252,10 @@ export default function HomePage() {
                 <em className="text-gold">c'est la spécialité</em>
               </h2>
               <p className="text-cream-muted text-base leading-relaxed">
-                Je ne travaille qu'avec des praticiens bien-être. Naturopathes,
-                coachs, réflexologues, thérapeutes — votre secteur est ma
-                spécialité. Je connais vos contraintes, votre audience, et ce
-                qui les fait passer à l'action.
+                Je ne travaille qu'avec des praticiens bien-être. Je connais
+                vos contraintes, votre audience, et ce qui les fait passer à
+                l'action. Pas de généraliste, pas de template — une stratégie
+                taillée pour vous.
               </p>
             </AnimatedSection>
           </div>
@@ -294,15 +271,10 @@ export default function HomePage() {
                   <div className="w-12 h-12 border border-gold/30 flex items-center justify-center mb-6 group-hover:border-gold transition-colors duration-300">
                     <Icon size={20} className="text-gold" />
                   </div>
-                  <h3
-                    className="font-display text-xl text-cream mb-3"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
+                  <h3 className="font-display text-xl text-cream mb-3" style={{ fontFamily: "var(--font-display)" }}>
                     {sol.title}
                   </h3>
-                  <p className="text-cream-muted text-sm leading-relaxed">
-                    {sol.desc}
-                  </p>
+                  <p className="text-cream-muted text-sm leading-relaxed">{sol.desc}</p>
                 </div>
               );
             })}
@@ -311,14 +283,11 @@ export default function HomePage() {
       </section>
 
       {/* ════════ APERÇU SERVICES ════════ */}
-      <section className="section-padding bg-dark-surface" aria-label="Offres Meta Ads">
+      <section className="section-padding bg-dark-surface">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="mb-14">
             <span className="gold-line mb-5" />
-            <h2
-              className="font-display text-4xl md:text-5xl text-cream"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
+            <h2 className="font-display text-4xl md:text-5xl text-cream" style={{ fontFamily: "var(--font-display)" }}>
               Deux façons de
               <br />
               <em className="text-gold">travailler ensemble</em>
@@ -329,31 +298,15 @@ export default function HomePage() {
             {servicesPrev.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.1}>
                 <div className="card-glass rounded-sm p-8 h-full hover:border-gold/30 transition-all duration-300 group flex flex-col">
-                  <span className="text-xs font-semibold tracking-widest text-gold uppercase mb-4">
-                    {service.label}
-                  </span>
-                  <h3
-                    className="font-display text-2xl text-cream mb-4"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
+                  <span className="text-xs font-semibold tracking-widest text-gold uppercase mb-4">{service.label}</span>
+                  <h3 className="font-display text-2xl text-cream mb-4" style={{ fontFamily: "var(--font-display)" }}>
                     {service.title}
                   </h3>
-                  <p className="text-cream-muted text-sm leading-relaxed mb-6 flex-1">
-                    {service.desc}
-                  </p>
+                  <p className="text-cream-muted text-sm leading-relaxed mb-6 flex-1">{service.desc}</p>
                   <div className="flex items-center justify-between pt-6 border-t border-dark-border">
-                    <span className="text-gold font-semibold">
-                      {service.price}
-                    </span>
-                    <Link
-                      href="/services"
-                      className="text-xs text-cream-muted hover:text-gold transition-colors flex items-center gap-1 group"
-                    >
-                      En savoir plus{" "}
-                      <ArrowRight
-                        size={12}
-                        className="group-hover:translate-x-1 transition-transform"
-                      />
+                    <span className="text-gold font-semibold">{service.price}</span>
+                    <Link href="/services" className="text-xs text-cream-muted hover:text-gold transition-colors flex items-center gap-1 group">
+                      En savoir plus <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>
@@ -364,7 +317,7 @@ export default function HomePage() {
       </section>
 
       {/* ════════ TÉMOIGNAGE ════════ */}
-      <section className="section-padding" aria-label="Témoignage client">
+      <section className="section-padding">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
             <div className="relative card-glass rounded-sm p-10 md:p-14 text-center">
@@ -373,30 +326,21 @@ export default function HomePage() {
               </div>
               <blockquote
                 className="font-display text-2xl md:text-3xl text-cream leading-relaxed mb-10"
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontStyle: "italic",
-                }}
+                style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}
               >
                 "{testimonial.quote}"
               </blockquote>
               <div className="flex justify-center gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-gold text-lg">
-                    ★
-                  </span>
+                  <span key={i} className="text-gold text-lg">★</span>
                 ))}
               </div>
               <div className="flex items-center justify-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center">
-                  <span className="text-gold text-sm font-semibold">
-                    {testimonial.initials}
-                  </span>
+                  <span className="text-gold text-sm font-semibold">{testimonial.initials}</span>
                 </div>
                 <div className="text-left">
-                  <p className="text-cream font-medium text-sm">
-                    {testimonial.name}
-                  </p>
+                  <p className="text-cream font-medium text-sm">{testimonial.name}</p>
                   <p className="text-cream-dim text-xs">{testimonial.role}</p>
                 </div>
               </div>
@@ -407,9 +351,7 @@ export default function HomePage() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.2} className="text-center mt-12">
-            <p className="text-cream-muted mb-5 text-sm">
-              Vous voulez des résultats similaires ?
-            </p>
+            <p className="text-cream-muted mb-5 text-sm">Vous voulez des résultats similaires ?</p>
             <Link href="/contact" className="btn-primary">
               Démarrons ensemble <ArrowRight size={16} />
             </Link>
