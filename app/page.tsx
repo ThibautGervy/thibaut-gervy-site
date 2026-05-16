@@ -74,8 +74,8 @@ export default function HomePage() {
         {/* ── Photo plein droite ── */}
         <div className="absolute inset-y-0 right-0 w-[55%] hidden lg:block">
           <Image
-            src="/thibaut-portrait.png"
-            alt="Thibaut Gervy — Spécialiste Meta Ads pour praticiens bien-être"
+            src="/face-thibaut-gris.png"
+            alt="Thibaut Gervy, spécialiste Meta Ads pour praticiens bien-être"
             fill
             priority
             className="object-cover object-top"
