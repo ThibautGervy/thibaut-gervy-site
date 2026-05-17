@@ -204,3 +204,26 @@ body {
     padding: 64px 0;
   }
 }
+
+/* ── Touches de chaleur organiques ── */
+.bg-warm-surface {
+  background-color: #141410;
+}
+
+/* Légère teinte chaude sur les sections alternées */
+.bg-warm-surface .card-glass {
+  background: rgba(20, 20, 16, 0.85);
+  border-color: #2e2d28;
+}
+
+/* Textes plus grands et plus lisibles */
+.text-readable {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--cream-muted);
+}
+
+/* Accent vert sauge très subtil */
+.accent-sage {
+  color: #8a9e8a;
+}
