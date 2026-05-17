@@ -282,6 +282,64 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* ════════ COMMENT JE TRAVAILLE ════════ */}
+      <section className="section-padding bg-dark" aria-label="Mon processus de travail">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection className="text-center mb-20">
+            <span className="gold-line mb-5" style={{ margin: '0 auto 20px' }} />
+            <h2
+              className="font-display text-4xl md:text-5xl text-cream mb-4"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              Comment je <em className="text-gold">travaille</em>
+            </h2>
+            <p className="text-cream-muted max-w-md mx-auto text-base">
+              Un processus structuré, de l'analyse jusqu'aux premiers résultats.
+            </p>
+          </AnimatedSection>
+
+          <div className="relative">
+            <div className="hidden lg:block absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-dark-border to-transparent" style={{ top: '40px' }} />
+            <StaggerGrid className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4 relative z-10">
+              {[
+                { num: '01', icon: '🔍', title: 'Audit et Analyse', desc: 'Analyse de votre situation, votre audience cible, vos concurrents. On définit ensemble la stratégie adaptée à votre pratique.' },
+                { num: '02', icon: '🔀', title: 'Tunnel de conversion', desc: 'Création ou optimisation de votre page sur systeme.io, LearnyBox ou WordPress pour transformer les clics en rendez-vous.' },
+                { num: '03', icon: '🎨', title: 'Création des visuels', desc: 'Design des visuels publicitaires adaptés à votre univers bien-être. Formats stories, carrés, reels.' },
+                { num: '04', icon: '🚀', title: 'Lancement Meta Ads', desc: 'Paramétrage complet : audiences, ciblage, copywriting, tests A/B. Vos campagnes sont lancées et surveillées.' },
+                { num: '05', icon: '📈', title: 'Optimisation continue', desc: 'Analyse hebdomadaire, ajustements, scaling des campagnes qui performent. Rapport mensuel inclus.' },
+              ].map((step) => (
+                <div key={step.num} className="flex flex-col items-center text-center group">
+                  <div className="relative mb-6">
+                    <div className="w-20 h-20 rounded-full border border-dark-border bg-dark-elevated flex items-center justify-center group-hover:border-gold/40 transition-all duration-500 relative">
+                      <span className="absolute -top-3 -right-3 w-7 h-7 rounded-full bg-gold flex items-center justify-center text-dark text-xs font-bold z-10">
+                        {step.num}
+                      </span>
+                      <span className="text-2xl">{step.icon}</span>
+                    </div>
+                  </div>
+                  <h3
+                    className="font-display text-base text-cream mb-3 group-hover:text-gold transition-colors duration-300"
+                    style={{ fontFamily: 'var(--font-display)' }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-cream-muted text-xs leading-relaxed">{step.desc}</p>
+                  <div className="lg:hidden mt-6 text-dark-border text-xl">↓</div>
+                </div>
+              ))}
+            </StaggerGrid>
+          </div>
+
+          <AnimatedSection className="text-center mt-16">
+            <p className="text-cream-muted text-sm mb-5">Prêt à démarrer ? Le premier échange est gratuit.</p>
+            <Link href="/contact" className="btn-primary">
+              Parlons de votre projet <ArrowRight size={16} />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ════════ APERÇU SERVICES ════════ */}
       <section className="section-padding bg-dark-surface">
         <div className="max-w-7xl mx-auto px-6">
