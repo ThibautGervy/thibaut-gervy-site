@@ -448,102 +448,173 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════
-          CE QUE VOUS OBTENEZ
+          CE QUE VOUS OBTENEZ — VERSION WOW
       ════════════════════════════════ */}
-      <section className="section-padding bg-warm-surface">
-        <div className="max-w-5xl mx-auto px-6">
-          <AnimatedSection className="mb-12">
-            <span className="gold-line mb-5" />
-            <h2
-              className="font-display text-4xl text-cream"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              Concrètement, vous
-              <br />
-              <em className="text-gold">repartez avec quoi ?</em>
-            </h2>
-          </AnimatedSection>
+      <section className="relative section-padding overflow-hidden" style={{ background: "#0d0d10" }}>
+        {/* Glow ambiant doré */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full pointer-events-none" style={{ background: "radial-gradient(ellipse, rgba(200,169,81,0.07) 0%, transparent 70%)" }} />
 
-          <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {deliverables.map((item, i) => (
-              <div
-                key={i}
-                className="card-glass rounded-sm p-6 flex items-start gap-4 hover:border-gold/25 transition-all duration-300"
-              >
-                <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full border border-gold/40 flex items-center justify-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold" />
-                </span>
-                <p className="text-cream-muted text-sm leading-relaxed">{item}</p>
-              </div>
-            ))}
-          </StaggerGrid>
-        </div>
-      </section>
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
 
-      {/* ════════════════════════════════
-          POUR QUI / PAS POUR QUI
-      ════════════════════════════════ */}
-      <section className="section-padding bg-dark">
-        <div className="max-w-5xl mx-auto px-6">
-
-          <AnimatedSection className="text-center mb-14">
-            <span className="gold-line mb-5" style={{ margin: "0 auto 20px" }} />
+          {/* Header section */}
+          <AnimatedSection className="text-center mb-16">
+            <p className="text-xs font-semibold tracking-[0.25em] text-gold uppercase mb-5">Ce que vous obtenez</p>
             <h2
               className="font-display text-4xl md:text-5xl text-cream"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Cet accompagnement
+              Concret. Clair.
               <br />
-              <em className="text-gold">est-il fait pour vous ?</em>
+              <em className="text-gold">Directement utile.</em>
             </h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-            <AnimatedSection direction="left">
-              <div className="card-glass rounded-sm p-8 h-full">
-                <div className="flex items-center gap-3 mb-7">
-                  <CheckCircle2 size={18} className="text-green-400 flex-shrink-0" />
-                  <h3
-                    className="font-display text-lg text-cream"
-                    style={{ fontFamily: "var(--font-display)" }}
+          {/* Grille de livrables — style premium avec numéros géants */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px" style={{ background: "rgba(37,37,53,0.4)" }}>
+            {[
+              { num: "01", title: "Un message clair", desc: "Une façon d'expliquer votre accompagnement que vos futurs clients comprennent du premier coup." },
+              { num: "02", title: "Des campagnes structurées", desc: "Des campagnes Meta Ads pensées autour d'un objectif précis, pas juste d'un budget à dépenser." },
+              { num: "03", title: "Des visuels cohérents", desc: "Textes et visuels publicitaires alignés avec votre univers et votre façon d'exercer." },
+              { num: "04", title: "Un parcours rassurant", desc: "Un chemin clair de la pub à la prise de contact, sans friction inutile." },
+              { num: "05", title: "Une lecture des résultats", desc: "Vous savez ce qui fonctionne, ce qui bloque, et ce qu'on ajuste. Pas de rapport incompréhensible." },
+            ].map((item, i) => (
+              <AnimatedSection key={i} delay={i * 0.08}>
+                <div
+                  className="group relative overflow-hidden p-8 h-full flex flex-col justify-between min-h-[200px] cursor-default"
+                  style={{ background: "#0d0d10" }}
+                >
+                  {/* Numéro géant en arrière-plan */}
+                  <span
+                    className="absolute -top-4 -right-2 font-display text-[88px] font-bold select-none pointer-events-none transition-all duration-500 group-hover:text-gold/10"
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      color: "rgba(37,37,53,0.5)",
+                      lineHeight: 1,
+                    }}
                   >
-                    C'est fait pour vous si...
-                  </h3>
-                </div>
-                <ul className="space-y-5">
-                  {forWho.map((item, i) => (
-                    <li key={i} className="flex items-start gap-4 text-cream-muted text-sm leading-relaxed">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimatedSection>
+                    {item.num}
+                  </span>
 
-            <AnimatedSection direction="right">
-              <div className="card-glass rounded-sm p-8 h-full">
-                <div className="flex items-center gap-3 mb-7">
-                  <XCircle size={18} className="text-red-400 flex-shrink-0" />
-                  <h3
-                    className="font-display text-lg text-cream"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
-                    Ce n'est pas adapté si...
-                  </h3>
+                  {/* Ligne dorée animée en haut */}
+                  <div
+                    className="absolute top-0 left-0 h-px bg-gold transition-all duration-500 group-hover:w-full"
+                    style={{ width: "0%" }}
+                  />
+                  <div className="absolute top-0 left-0 h-px w-8 bg-gold/30" />
+
+                  {/* Contenu */}
+                  <div className="relative z-10">
+                    <h3
+                      className="font-display text-xl text-cream mb-3 group-hover:text-gold transition-colors duration-300"
+                      style={{ fontFamily: "var(--font-display)" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-cream-dim text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+
+                  {/* Shimmer au hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ background: "linear-gradient(135deg, rgba(200,169,81,0.03) 0%, transparent 60%)" }} />
                 </div>
-                <ul className="space-y-5">
-                  {notForWho.map((item, i) => (
-                    <li key={i} className="flex items-start gap-4 text-cream-muted text-sm leading-relaxed">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════
+          POUR QUI / PAS POUR QUI — VERSION WOW
+      ════════════════════════════════ */}
+      <section className="relative section-padding overflow-hidden bg-dark">
+        {/* Ligne décorative verticale centrale */}
+        <div className="absolute top-0 bottom-0 left-1/2 w-px hidden lg:block" style={{ background: "linear-gradient(to bottom, transparent, rgba(200,169,81,0.15), transparent)" }} />
+
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+
+          <AnimatedSection className="text-center mb-16">
+            <p className="text-xs font-semibold tracking-[0.25em] text-gold uppercase mb-5">Compatibilité</p>
+            <h2
+              className="font-display text-4xl md:text-5xl text-cream"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              Ce travail est
+              <br />
+              <em className="text-gold">fait pour vous si...</em>
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+
+            {/* OUI */}
+            <AnimatedSection direction="left">
+              <div className="relative">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-sm border border-green-500/20" style={{ background: "rgba(34,197,94,0.05)" }}>
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                  <span className="text-green-400 text-xs font-semibold tracking-widest uppercase">Oui, c'est pour vous</span>
+                </div>
+
+                <ul className="space-y-6">
+                  {forWho.map((item, i) => (
+                    <AnimatedSection key={i} delay={i * 0.08}>
+                      <li className="group flex items-start gap-5">
+                        {/* Numéro */}
+                        <span
+                          className="flex-shrink-0 font-display text-3xl text-dark-border group-hover:text-gold/30 transition-colors duration-300 leading-none mt-1"
+                          style={{ fontFamily: "var(--font-display)" }}
+                        >
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <div>
+                          <p className="text-cream text-base leading-relaxed group-hover:text-cream transition-colors duration-200">{item}</p>
+                          <div className="mt-2 h-px w-0 bg-green-400/30 group-hover:w-full transition-all duration-500" />
+                        </div>
+                      </li>
+                    </AnimatedSection>
+                  ))}
+                </ul>
+              </div>
+            </AnimatedSection>
+
+            {/* NON */}
+            <AnimatedSection direction="right">
+              <div className="relative">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-sm border border-red-500/20" style={{ background: "rgba(239,68,68,0.05)" }}>
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-400" />
+                  <span className="text-red-400 text-xs font-semibold tracking-widest uppercase">Pas encore adapté</span>
+                </div>
+
+                <ul className="space-y-6">
+                  {notForWho.map((item, i) => (
+                    <AnimatedSection key={i} delay={i * 0.08}>
+                      <li className="group flex items-start gap-5">
+                        <span
+                          className="flex-shrink-0 font-display text-3xl text-dark-border group-hover:text-red-400/20 transition-colors duration-300 leading-none mt-1"
+                          style={{ fontFamily: "var(--font-display)" }}
+                        >
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <div>
+                          <p className="text-cream-muted text-base leading-relaxed">{item}</p>
+                          <div className="mt-2 h-px w-0 bg-red-400/20 group-hover:w-full transition-all duration-500" />
+                        </div>
+                      </li>
+                    </AnimatedSection>
+                  ))}
+                </ul>
+              </div>
+            </AnimatedSection>
+
+          </div>
+
+          {/* CTA centré */}
+          <AnimatedSection className="text-center mt-16 pt-12 border-t border-dark-border">
+            <p className="text-cream-muted text-base mb-6">Vous vous reconnaissez dans la colonne de gauche ?</p>
+            <Link href="/contact" className="btn-primary">
+              Planifier un appel gratuit <ArrowRight size={15} />
+            </Link>
+          </AnimatedSection>
         </div>
       </section>
 
