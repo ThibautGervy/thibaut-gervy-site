@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, TrendingUp, Target, Users, Quote, CheckCircle2, XCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2, XCircle, Quote } from "lucide-react";
 import AnimatedSection, { StaggerGrid } from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "Meta Ads & Marketing Digital pour Naturopathes et Thérapeutes",
+  title: "Meta Ads pour Naturopathes et Thérapeutes — Thibaut Gervy",
   description:
-    "Transformez votre visibilité en clients grâce à des campagnes Meta Ads qui convertissent vraiment. Spécialiste marketing digital pour naturopathes, coachs et thérapeutes bien-être — toute la France.",
+    "J'aide les naturopathes, thérapeutes et coachs bien-être à clarifier leur message, lancer des campagnes Meta Ads propres et transformer leur visibilité en demandes concrètes.",
   alternates: { canonical: "https://thibautgervy.fr" },
   openGraph: {
-    title: "Thibaut Gervy — Meta Ads pour Naturopathes & Thérapeutes",
+    title: "Thibaut Gervy — Meta Ads pour Naturopathes et Thérapeutes",
     description:
-      "Remplissez votre agenda grâce à des campagnes Facebook & Instagram pensées pour les praticiens bien-être.",
+      "Des campagnes Meta Ads structurées pour praticiens bien-être. Message clair, parcours rassurant, demandes concrètes.",
     url: "https://thibautgervy.fr",
   },
 };
@@ -20,71 +20,84 @@ export const metadata: Metadata = {
 const problems = [
   "Vous publiez régulièrement, mais les demandes restent rares.",
   "Vous avez du mal à transformer votre visibilité en rendez-vous.",
-  "Vous ne savez pas quoi dire dans vos pubs sans paraître trop commercial.",
-  "Vous avez déjà tenté de booster des posts, sans vrai retour.",
+  "Vous ne savez pas toujours quoi dire dans vos pubs sans paraître trop commercial.",
+  "Vous avez peut-être déjà boosté une publication, sans vrai retour derrière.",
 ];
 
 const solutions = [
   {
-    icon: Target,
-    title: "Campagnes Meta Ads ciblées",
-    desc: "Un message précis pour les bonnes personnes au bon moment. Pas de gaspillage budgétaire.",
+    title: "Message clair",
+    desc: "On transforme votre expertise en promesse compréhensible, sans jargon ni discours trop commercial.",
   },
   {
-    icon: TrendingUp,
-    title: "Tunnel de conversion optimisé",
-    desc: "Votre page transformée pour convertir les visiteurs en clients sur systeme.io ou WordPress.",
+    title: "Campagnes structurées",
+    desc: "Des campagnes Meta Ads pensées autour d'un objectif simple : générer des demandes, pas seulement des clics.",
   },
   {
-    icon: Users,
-    title: "Expertise secteur bien-être",
-    desc: "Naturopathie, coaching, réflexologie. Votre univers est ma spécialité exclusive.",
+    title: "Parcours rassurant",
+    desc: "On vérifie que la page, le message et l'appel à l'action donnent envie de passer à l'étape suivante.",
   },
 ];
 
-const servicesPrev = [
-  {
-    label: "Mission ponctuelle",
-    title: "Setup complet Meta Ads",
-    desc: "Vous voulez lancer une campagne proprement, sur des bases solides, sans vous tromper de départ.",
-    ideal: "Idéal si vous démarrez ou repartez de zéro.",
-    price: "À partir de 690 €",
-  },
-  {
-    label: "Accompagnement mensuel",
-    title: "Suivi mensuel",
-    desc: "Vous voulez déléguer et améliorer vos résultats mois après mois, sans gérer les campagnes vous-même.",
-    ideal: "Idéal si vous voulez des clients réguliers sans vous en occuper.",
-    price: "À partir de 390 €/mois",
-  },
+const deliverables = [
+  "Un message plus clair pour expliquer votre accompagnement.",
+  "Des campagnes Meta Ads structurées autour d'un objectif précis.",
+  "Des visuels et textes publicitaires cohérents avec votre pratique.",
+  "Un parcours de prise de rendez-vous plus rassurant.",
+  "Une lecture simple des résultats pour savoir quoi améliorer.",
 ];
-
-const testimonial = {
-  quote:
-    "En 6 semaines, j'ai rempli mon carnet de rdv pour les 3 prochains mois. Je n'aurais jamais pensé que Meta Ads pouvait fonctionner aussi bien pour ma pratique de naturopathie.",
-  name: "Sophie M.",
-  role: "Naturopathe, Lyon",
-  initials: "SM",
-};
 
 const forWho = [
-  "Vous êtes naturopathe, thérapeute, coach ou praticien bien-être",
-  "Vous avez déjà une offre claire et un tarif défini",
-  "Vous voulez obtenir plus de demandes qualifiées",
-  "Vous êtes prêt à investir sérieusement dans votre visibilité",
+  "Vous avez une pratique sérieuse et une offre déjà claire.",
+  "Vous voulez obtenir plus de demandes sans publier tous les jours.",
+  "Vous êtes prêt à investir dans une stratégie propre, pas juste booster un post.",
+  "Vous voulez une communication crédible, humaine et alignée avec votre métier.",
 ];
 
 const notForWho = [
-  "Votre offre n'est pas encore clairement définie",
-  "Vous cherchez seulement à booster un post à 20 €",
-  "Vous voulez des résultats sans suivi ni stratégie",
+  "Vous cherchez une promesse miracle en quelques jours.",
+  "Votre offre ou votre cible est encore trop floue.",
+  "Vous voulez déléguer sans aucun échange sur votre pratique.",
+  "Vous n'avez pas de budget publicitaire minimum à investir.",
+];
+
+const steps = [
+  {
+    num: "01",
+    title: "Audit du message",
+    desc: "On clarifie votre offre, votre cible et ce qui peut bloquer la prise de contact.",
+  },
+  {
+    num: "02",
+    title: "Angle de campagne",
+    desc: "On trouve le bon angle pour parler à vos futurs clients sans forcer ni survendre.",
+  },
+  {
+    num: "03",
+    title: "Création des visuels",
+    desc: "Des visuels sobres, crédibles et adaptés à votre univers.",
+  },
+  {
+    num: "04",
+    title: "Lancement Meta Ads",
+    desc: "Mise en place des campagnes, audiences, budget et suivi des premiers signaux.",
+  },
+  {
+    num: "05",
+    title: "Ajustements",
+    desc: "Chaque mois, on regarde ce qui attire, ce qui bloque, et ce qu'il faut améliorer.",
+  },
 ];
 
 export default function HomePage() {
   return (
     <>
-      {/* ════════ HERO ════════ */}
+      {/* ════════════════════════════════
+          HERO
+      ════════════════════════════════ */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-dark">
+
+        {/* Photo droite */}
         <div className="absolute inset-y-0 right-0 w-[55%] hidden lg:block">
           <Image
             src="/face-thibaut-gris.png"
@@ -94,124 +107,129 @@ export default function HomePage() {
             className="object-cover object-top"
             sizes="55vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/60 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-dark/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/55 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark/50 via-transparent to-dark/15" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
-          <div className="max-w-xl">
+          <div className="max-w-[540px]">
+
             <AnimatedSection delay={0}>
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-3 mb-10">
                 <span className="gold-line" />
                 <span className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">
-                  Spécialiste Meta Ads · Bien-être
+                  Meta Ads · Praticiens bien-être
                 </span>
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.1}>
               <h1
-                className="font-display text-5xl md:text-6xl lg:text-[68px] text-cream leading-[1.05] mb-6"
+                className="font-display text-5xl md:text-6xl text-cream leading-[1.06] mb-7"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Et si votre agenda
+                Faites de Meta Ads
                 <br />
-                était plein dès
+                un vrai levier de
                 <br />
-                <em className="text-gold not-italic">le mois prochain ?</em>
+                <em className="text-gold not-italic">rendez-vous.</em>
               </h1>
             </AnimatedSection>
 
-            {/* Sous-titre plus direct et impactant */}
             <AnimatedSection delay={0.2}>
-              <p className="text-cream text-lg leading-relaxed mb-10 max-w-lg">
-                J'aide les <strong>naturopathes, thérapeutes et coachs bien-être</strong> à attirer plus de clients qualifiés grâce à des campagnes Meta Ads <strong>claires, rentables et bien positionnées.</strong>
+              <p className="text-cream-muted text-base md:text-lg leading-relaxed mb-10 max-w-[480px]">
+                J'aide les naturopathes, thérapeutes et coachs bien-être à clarifier leur message, lancer des campagnes Meta Ads propres, et transformer leur visibilité en demandes concrètes.
               </p>
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4 mb-14">
                 <Link href="/contact" className="btn-primary">
-                  Voir si Meta Ads peut fonctionner pour moi <ArrowRight size={16} />
+                  Voir si Meta Ads peut fonctionner pour moi <ArrowRight size={15} />
                 </Link>
                 <Link href="/services" className="btn-secondary">
-                  Voir mes offres
+                  Voir les offres
                 </Link>
               </div>
             </AnimatedSection>
 
-            {/* Stats contextualisées */}
+            {/* Chiffres contextualisés */}
             <AnimatedSection delay={0.4}>
-              <div className="flex flex-wrap gap-10 pt-8 border-t border-dark-border/60">
-                <div>
-                  <p className="font-display text-2xl text-gold mb-0.5" style={{ fontFamily: "var(--font-display)" }}>20+</p>
-                  <p className="text-cream-dim text-xs leading-tight">praticiens bien-être<br/>accompagnés</p>
-                </div>
-                <div>
-                  <p className="font-display text-2xl text-gold mb-0.5" style={{ fontFamily: "var(--font-display)" }}>Jusqu'à ×3</p>
-                  <p className="text-cream-dim text-xs leading-tight">de retour sur<br/>investissement</p>
-                </div>
-                <div>
-                  <p className="font-display text-2xl text-gold mb-0.5" style={{ fontFamily: "var(--font-display)" }}>11 €</p>
-                  <p className="text-cream-dim text-xs leading-tight">coût par lead moyen<br/>après optimisation</p>
-                </div>
+              <div className="flex flex-wrap gap-8 pt-8 border-t border-dark-border/50">
+                {[
+                  { value: "20+", label: "campagnes analysées" },
+                  { value: "Jusqu'à ×3", label: "de retour observé" },
+                  { value: "1 €", label: "investi doit servir un objectif clair" },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <p
+                      className="font-display text-xl md:text-2xl text-gold mb-1"
+                      style={{ fontFamily: "var(--font-display)" }}
+                    >
+                      {stat.value}
+                    </p>
+                    <p className="text-cream-dim text-xs leading-snug max-w-[120px]">{stat.label}</p>
+                  </div>
+                ))}
               </div>
             </AnimatedSection>
           </div>
         </div>
 
+        {/* Badge flottant */}
         <div className="absolute bottom-10 right-10 hidden lg:block z-20">
-          <div className="bg-dark-surface/90 backdrop-blur-sm border border-gold/30 rounded-sm px-5 py-4">
-            <p className="text-xs text-cream-dim mb-1">Coût par lead après optimisation</p>
-            <p className="text-gold font-semibold text-xl">-60% <span className="text-cream-muted text-xs font-normal">en moyenne</span></p>
+          <div className="bg-dark-surface/90 backdrop-blur-sm border border-gold/25 rounded-sm px-5 py-4">
+            <p className="text-xs text-cream-dim mb-1">Coût par lead constaté</p>
+            <p className="text-gold font-semibold text-xl">
+              -60% <span className="text-cream-muted text-xs font-normal">après optimisation</span>
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ════════ PROBLÈME ════════ */}
+      {/* ════════════════════════════════
+          PROBLÈME
+      ════════════════════════════════ */}
       <section className="section-padding bg-warm-surface">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <AnimatedSection direction="left">
-                <span className="gold-line mb-6" />
-                <h2
-                  className="font-display text-4xl md:text-5xl text-cream mb-6"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  Vous avez le talent.
-                  <br />
-                  <em className="text-gold">Pas encore les clients.</em>
-                </h2>
-                <p className="text-cream-muted text-base leading-relaxed mb-8">
-                  Être un excellent praticien ne suffit pas pour remplir son
-                  agenda. Dans un monde numérique saturé, la visibilité ne
-                  s'improvise plus.
-                </p>
-                <ul className="space-y-5">
-                  {problems.map((p, i) => (
-                    <li key={i} className="flex items-start gap-4 text-cream-muted text-base">
-                      <span className="mt-1.5 w-2 h-2 rounded-full bg-gold flex-shrink-0" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </AnimatedSection>
-            </div>
 
-            <AnimatedSection direction="right" className="relative">
+            <AnimatedSection direction="left">
+              <span className="gold-line mb-6" />
+              <h2
+                className="font-display text-4xl md:text-5xl text-cream mb-5"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                Vous avez le talent.
+                <br />
+                <em className="text-gold">Pas encore les clients.</em>
+              </h2>
+              <p className="text-cream-muted text-base leading-relaxed mb-8 max-w-md">
+                Souvent, le problème ne vient pas de votre pratique. Il vient d'un message trop flou, d'une offre mal expliquée, ou d'un parcours qui ne rassure pas assez avant la prise de rendez-vous.
+              </p>
+              <ul className="space-y-5">
+                {problems.map((p, i) => (
+                  <li key={i} className="flex items-start gap-4 text-cream-muted text-base leading-relaxed">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </AnimatedSection>
+
+            <AnimatedSection direction="right">
               <div className="relative rounded-sm overflow-hidden aspect-[4/3]">
                 <Image
                   src="/thibaut-laptop.png"
-                  alt="Thibaut Gervy analysant des campagnes Meta Ads"
+                  alt="Thibaut Gervy analysant des campagnes Meta Ads pour un praticien bien-être"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent" />
-                <div className="absolute bottom-6 left-6 bg-dark-surface/90 backdrop-blur-sm border border-dark-border rounded-sm px-4 py-3">
-                  <p className="text-xs text-cream-dim mb-0.5">Coût par lead moyen</p>
-                  <p className="text-gold font-semibold text-lg">
+                <div className="absolute bottom-5 left-5 bg-dark-surface/90 backdrop-blur-sm border border-dark-border rounded-sm px-4 py-3">
+                  <p className="text-xs text-cream-dim mb-1">Coût par lead constaté</p>
+                  <p className="text-gold font-semibold text-base">
                     -60% <span className="text-cream-muted text-xs font-normal">après optimisation</span>
                   </p>
                 </div>
@@ -221,15 +239,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════ SOLUTION ════════ */}
+      {/* ════════════════════════════════
+          SOLUTION
+      ════════════════════════════════ */}
       <section className="section-padding bg-dark">
         <div className="max-w-7xl mx-auto px-6">
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-            <AnimatedSection direction="left" className="relative">
+            <AnimatedSection direction="left">
               <div className="relative rounded-sm overflow-hidden aspect-[4/3]">
                 <Image
                   src="/thibaut-client.png"
-                  alt="Thibaut Gervy en consultation avec une praticienne bien-être"
+                  alt="Thibaut Gervy en échange avec une praticienne bien-être"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -244,44 +265,42 @@ export default function HomePage() {
                 className="font-display text-4xl md:text-5xl text-cream mb-5"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                La solution,{" "}
-                <em className="text-gold">c'est la spécialité</em>
+                Je ne fais pas de
+                <br />
+                <em className="text-gold">pub générique.</em>
               </h2>
               <p className="text-cream-muted text-base leading-relaxed">
-                Je ne travaille qu'avec des praticiens bien-être. Je connais
-                vos contraintes, votre audience, et ce qui les fait passer à
-                l'action. Pas de généraliste, pas de template. Une stratégie
-                taillée pour vous.
+                Avant de lancer une campagne, je travaille votre angle, votre message, votre offre et le parcours de prise de rendez-vous. Parce qu'une publicité qui attire des clics mais ne rassure pas ne sert pas à grand-chose.
               </p>
             </AnimatedSection>
           </div>
 
-          <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {solutions.map((sol) => {
-              const Icon = sol.icon;
-              return (
-                <div
-                  key={sol.title}
-                  className="card-glass rounded-sm p-8 hover:border-gold/30 transition-all duration-300 group"
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {solutions.map((sol) => (
+              <div
+                key={sol.title}
+                className="card-glass rounded-sm p-7 hover:border-gold/30 transition-all duration-300 group"
+              >
+                <h3
+                  className="font-display text-xl text-cream mb-3"
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
-                  <div className="w-12 h-12 border border-gold/30 flex items-center justify-center mb-6 group-hover:border-gold transition-colors duration-300">
-                    <Icon size={20} className="text-gold" />
-                  </div>
-                  <h3 className="font-display text-xl text-cream mb-3" style={{ fontFamily: "var(--font-display)" }}>
-                    {sol.title}
-                  </h3>
-                  <p className="text-cream-muted text-sm leading-relaxed">{sol.desc}</p>
-                </div>
-              );
-            })}
+                  {sol.title}
+                </h3>
+                <p className="text-cream-muted text-sm leading-relaxed">{sol.desc}</p>
+              </div>
+            ))}
           </StaggerGrid>
         </div>
       </section>
 
-      {/* ════════ COMMENT JE TRAVAILLE ════════ */}
+      {/* ════════════════════════════════
+          MÉTHODE
+      ════════════════════════════════ */}
       <section className="section-padding bg-warm-surface">
         <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection className="text-center mb-20">
+
+          <AnimatedSection className="text-center mb-16">
             <span className="gold-line mb-5" style={{ margin: "0 auto 20px" }} />
             <h2
               className="font-display text-4xl md:text-5xl text-cream mb-4"
@@ -289,28 +308,26 @@ export default function HomePage() {
             >
               Comment je <em className="text-gold">travaille</em>
             </h2>
-            <p className="text-cream-muted max-w-md mx-auto text-base">
-              Un processus structuré, de l'analyse jusqu'aux premiers résultats.
+            <p className="text-cream-muted text-base max-w-sm mx-auto">
+              Cinq étapes, une logique claire, pas de zone floue.
             </p>
           </AnimatedSection>
 
           <div className="relative">
-            <div className="hidden lg:block absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-dark-border to-transparent" style={{ top: "40px" }} />
-            <StaggerGrid className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4 relative z-10">
-              {[
-                { num: "01", icon: "🔍", title: "Audit et Analyse", desc: "Analyse de votre situation, votre audience cible, vos concurrents. On définit ensemble la stratégie adaptée." },
-                { num: "02", icon: "🔀", title: "Tunnel de conversion", desc: "Création ou optimisation de votre page sur systeme.io, LearnyBox ou WordPress pour convertir les clics en rdv." },
-                { num: "03", icon: "🎨", title: "Création des visuels", desc: "Design des visuels publicitaires adaptés à votre univers bien-être. Stories, carrés, reels." },
-                { num: "04", icon: "🚀", title: "Lancement Meta Ads", desc: "Paramétrage complet : audiences, ciblage, copywriting, tests A/B. Campagnes lancées et surveillées." },
-                { num: "05", icon: "📈", title: "Optimisation continue", desc: "Analyse hebdomadaire, ajustements, scaling des campagnes qui performent. Rapport mensuel inclus." },
-              ].map((step) => (
+            {/* Ligne horizontale desktop */}
+            <div
+              className="hidden lg:block absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-dark-border to-transparent"
+              style={{ top: "40px" }}
+            />
+
+            <StaggerGrid className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-6 relative z-10">
+              {steps.map((step) => (
                 <div key={step.num} className="flex flex-col items-center text-center group">
                   <div className="relative mb-6">
-                    <div className="w-20 h-20 rounded-full border border-dark-border bg-dark-elevated flex items-center justify-center group-hover:border-gold/40 transition-all duration-500 relative">
+                    <div className="w-20 h-20 rounded-full border border-dark-border bg-dark-elevated flex items-center justify-center group-hover:border-gold/40 transition-all duration-500">
                       <span className="absolute -top-3 -right-3 w-7 h-7 rounded-full bg-gold flex items-center justify-center text-dark text-xs font-bold z-10">
                         {step.num}
                       </span>
-                      <span className="text-2xl">{step.icon}</span>
                     </div>
                   </div>
                   <h3
@@ -320,7 +337,7 @@ export default function HomePage() {
                     {step.title}
                   </h3>
                   <p className="text-cream-muted text-sm leading-relaxed">{step.desc}</p>
-                  <div className="lg:hidden mt-6 text-dark-border text-xl">↓</div>
+                  <div className="lg:hidden mt-6 text-dark-border">↓</div>
                 </div>
               ))}
             </StaggerGrid>
@@ -328,57 +345,151 @@ export default function HomePage() {
 
           <AnimatedSection className="text-center mt-16">
             <Link href="/contact" className="btn-primary">
-              Planifier un appel gratuit <ArrowRight size={16} />
+              Planifier un appel gratuit <ArrowRight size={15} />
             </Link>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* ════════ APERÇU SERVICES ════════ */}
+      {/* ════════════════════════════════
+          OFFRES
+      ════════════════════════════════ */}
       <section className="section-padding bg-dark">
         <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection className="mb-14">
+
+          <AnimatedSection className="mb-12">
             <span className="gold-line mb-5" />
-            <h2 className="font-display text-4xl md:text-5xl text-cream mb-3" style={{ fontFamily: "var(--font-display)" }}>
+            <h2
+              className="font-display text-4xl md:text-5xl text-cream mb-3"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
               Deux façons de
               <br />
               <em className="text-gold">travailler ensemble</em>
             </h2>
-            <p className="text-cream-muted text-base max-w-lg">
-              Choisissez selon là où vous en êtes. Les deux mènent au même endroit : un agenda qui se remplit.
+            <p className="text-cream-muted text-base max-w-lg mt-3">
+              Selon que vous voulez lancer une campagne proprement ou déléguer le suivi dans la durée.
             </p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {servicesPrev.map((service, i) => (
-              <AnimatedSection key={service.title} delay={i * 0.1}>
-                <div className="card-glass rounded-sm p-8 h-full hover:border-gold/30 transition-all duration-300 group flex flex-col">
-                  <span className="text-xs font-semibold tracking-widest text-gold uppercase mb-4">{service.label}</span>
-                  <h3 className="font-display text-2xl text-cream mb-3" style={{ fontFamily: "var(--font-display)" }}>
-                    {service.title}
-                  </h3>
-                  <p className="text-cream-muted text-base leading-relaxed mb-4 flex-1">{service.desc}</p>
-                  <p className="text-cream text-sm italic mb-6">{service.ideal}</p>
-                  <div className="flex items-center justify-between pt-6 border-t border-dark-border">
-                    <span className="text-gold font-semibold text-lg">{service.price}</span>
-                    <Link href="/services" className="text-sm text-cream-muted hover:text-gold transition-colors flex items-center gap-1 group">
-                      En savoir plus <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
+
+            <AnimatedSection delay={0}>
+              <div className="card-glass rounded-sm p-8 h-full hover:border-gold/30 transition-all duration-300 flex flex-col">
+                <span className="text-xs font-semibold tracking-widest text-gold uppercase mb-5">Mission ponctuelle</span>
+                <h3
+                  className="font-display text-2xl text-cream mb-4"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  Setup complet Meta Ads
+                </h3>
+                <p className="text-cream-muted text-base leading-relaxed mb-5 flex-1">
+                  Pour lancer une campagne claire, propre et prête à convertir, sans partir dans tous les sens.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {[
+                    "Clarification du message",
+                    "Structure de campagne",
+                    "Création ou recommandation des visuels",
+                    "Paramétrage Meta Ads",
+                    "Recommandations sur le parcours de conversion",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-cream-muted">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-center justify-between pt-5 border-t border-dark-border mt-auto">
+                  <span className="text-gold font-semibold text-lg">À partir de 690 €</span>
+                  <Link href="/services" className="text-sm text-cream-muted hover:text-gold transition-colors flex items-center gap-1 group">
+                    En savoir plus <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
-              </AnimatedSection>
-            ))}
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.1}>
+              <div className="card-glass rounded-sm p-8 h-full hover:border-gold/30 transition-all duration-300 flex flex-col">
+                <span className="text-xs font-semibold tracking-widest text-gold uppercase mb-5">Accompagnement mensuel</span>
+                <h3
+                  className="font-display text-2xl text-cream mb-4"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  Suivi mensuel
+                </h3>
+                <p className="text-cream-muted text-base leading-relaxed mb-5 flex-1">
+                  Pour piloter vos campagnes dans la durée, suivre les résultats et améliorer vos demandes de rendez-vous mois après mois.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {[
+                    "Suivi des campagnes actives",
+                    "Lecture et analyse des résultats",
+                    "Ajustements des messages et audiences",
+                    "Optimisation des visuels",
+                    "Recommandations régulières",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-cream-muted">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-center justify-between pt-5 border-t border-dark-border mt-auto">
+                  <span className="text-gold font-semibold text-lg">À partir de 390 €/mois</span>
+                  <Link href="/services" className="text-sm text-cream-muted hover:text-gold transition-colors flex items-center gap-1 group">
+                    En savoir plus <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* ════════ POUR QUI / PAS POUR QUI ════════ */}
+      {/* ════════════════════════════════
+          CE QUE VOUS OBTENEZ
+      ════════════════════════════════ */}
       <section className="section-padding bg-warm-surface">
         <div className="max-w-5xl mx-auto px-6">
+          <AnimatedSection className="mb-12">
+            <span className="gold-line mb-5" />
+            <h2
+              className="font-display text-4xl text-cream"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              Concrètement, vous
+              <br />
+              <em className="text-gold">repartez avec quoi ?</em>
+            </h2>
+          </AnimatedSection>
+
+          <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {deliverables.map((item, i) => (
+              <div
+                key={i}
+                className="card-glass rounded-sm p-6 flex items-start gap-4 hover:border-gold/25 transition-all duration-300"
+              >
+                <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full border border-gold/40 flex items-center justify-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+                </span>
+                <p className="text-cream-muted text-sm leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </StaggerGrid>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════
+          POUR QUI / PAS POUR QUI
+      ════════════════════════════════ */}
+      <section className="section-padding bg-dark">
+        <div className="max-w-5xl mx-auto px-6">
+
           <AnimatedSection className="text-center mb-14">
             <span className="gold-line mb-5" style={{ margin: "0 auto 20px" }} />
             <h2
-              className="font-display text-4xl md:text-5xl text-cream mb-4"
+              className="font-display text-4xl md:text-5xl text-cream"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Cet accompagnement
@@ -387,20 +498,23 @@ export default function HomePage() {
             </h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Pour qui */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
             <AnimatedSection direction="left">
-              <div className="card-glass rounded-sm p-8 border-green-900/30 h-full">
-                <div className="flex items-center gap-3 mb-6">
-                  <CheckCircle2 size={20} className="text-green-400 flex-shrink-0" />
-                  <h3 className="font-display text-xl text-cream" style={{ fontFamily: "var(--font-display)" }}>
+              <div className="card-glass rounded-sm p-8 h-full">
+                <div className="flex items-center gap-3 mb-7">
+                  <CheckCircle2 size={18} className="text-green-400 flex-shrink-0" />
+                  <h3
+                    className="font-display text-lg text-cream"
+                    style={{ fontFamily: "var(--font-display)" }}
+                  >
                     C'est fait pour vous si...
                   </h3>
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-5">
                   {forWho.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-base text-cream-muted">
-                      <span className="mt-1.5 w-2 h-2 rounded-full bg-green-400 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-4 text-cream-muted text-sm leading-relaxed">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -408,19 +522,21 @@ export default function HomePage() {
               </div>
             </AnimatedSection>
 
-            {/* Pas pour qui */}
             <AnimatedSection direction="right">
-              <div className="card-glass rounded-sm p-8 border-red-900/20 h-full">
-                <div className="flex items-center gap-3 mb-6">
-                  <XCircle size={20} className="text-red-400 flex-shrink-0" />
-                  <h3 className="font-display text-xl text-cream" style={{ fontFamily: "var(--font-display)" }}>
+              <div className="card-glass rounded-sm p-8 h-full">
+                <div className="flex items-center gap-3 mb-7">
+                  <XCircle size={18} className="text-red-400 flex-shrink-0" />
+                  <h3
+                    className="font-display text-lg text-cream"
+                    style={{ fontFamily: "var(--font-display)" }}
+                  >
                     Ce n'est pas adapté si...
                   </h3>
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-5">
                   {notForWho.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-base text-cream-muted">
-                      <span className="mt-1.5 w-2 h-2 rounded-full bg-red-400 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-4 text-cream-muted text-sm leading-relaxed">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -431,44 +547,49 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════ TÉMOIGNAGE ════════ */}
-      <section className="section-padding bg-dark">
+      {/* ════════════════════════════════
+          TÉMOIGNAGE
+      ════════════════════════════════ */}
+      <section className="section-padding bg-warm-surface">
         <div className="max-w-4xl mx-auto px-6">
+
           <AnimatedSection>
             <div className="relative card-glass rounded-sm p-10 md:p-14 text-center">
               <div className="flex justify-center mb-8">
-                <Quote size={36} className="text-gold/40" strokeWidth={1} />
+                <Quote size={32} className="text-gold/35" strokeWidth={1} />
               </div>
               <blockquote
-                className="font-display text-2xl md:text-3xl text-cream leading-relaxed mb-10"
+                className="font-display text-xl md:text-2xl text-cream leading-relaxed mb-10"
                 style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}
               >
-                "{testimonial.quote}"
+                "En 6 semaines, j'ai rempli mon carnet de rendez-vous pour les 3 prochains mois. Je n'aurais jamais pensé que Meta Ads pouvait fonctionner aussi bien pour ma pratique de naturopathie."
               </blockquote>
+
               <div className="flex justify-center gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-gold text-lg">★</span>
+                  <span key={i} className="text-gold">★</span>
                 ))}
               </div>
+
               <div className="flex items-center justify-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center">
-                  <span className="text-gold text-sm font-semibold">{testimonial.initials}</span>
+                <div className="w-11 h-11 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center">
+                  <span className="text-gold text-xs font-semibold">SM</span>
                 </div>
                 <div className="text-left">
-                  <p className="text-cream font-medium text-sm">{testimonial.name}</p>
-                  <p className="text-cream-dim text-xs">{testimonial.role}</p>
+                  <p className="text-cream font-medium text-sm">Sophie M.</p>
+                  <p className="text-cream-dim text-xs">Naturopathe · après 6 semaines d'accompagnement</p>
                 </div>
               </div>
-              <div className="absolute top-6 right-6 bg-gold/10 border border-gold/20 rounded-sm px-3 py-1">
-                <p className="text-gold text-xs font-medium">Résultat réel</p>
+
+              <div className="absolute top-6 right-6 bg-gold/8 border border-gold/15 rounded-sm px-3 py-1">
+                <p className="text-gold text-xs">Résultat réel</p>
               </div>
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.2} className="text-center mt-12">
-            <p className="text-cream-muted mb-5">Vous voulez des résultats similaires ?</p>
+          <AnimatedSection delay={0.2} className="text-center mt-10">
             <Link href="/contact" className="btn-primary">
-              Planifier un appel gratuit <ArrowRight size={16} />
+              Planifier un appel gratuit <ArrowRight size={15} />
             </Link>
           </AnimatedSection>
         </div>
